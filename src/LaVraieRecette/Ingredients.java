@@ -8,11 +8,11 @@ public class Ingredients {
     String nom;
     double quantite;
     String type;
-
+//
 //constructeur
     public Ingredients(String nom, double quantite, String type){
         this.nom=nom;
-        this.quantite=quantite;
+       this.quantite=quantite;
         this.type=type;
     }
 
@@ -32,7 +32,9 @@ public class Ingredients {
     }
     @Override
     public String toString(){
-        return " le nom de l'ingredient "+nom + "la quantité"+quantite+ ""+type;
+
+       // return " le nom de l'ingredient "+nom + "la quantité"+quantite+ ""+type;
+        return nom;
     }
 
 
@@ -60,6 +62,7 @@ public class Ingredients {
 
 
         System.out.println(vanille.getNom()+""+vanille.getQuantite()+""+ vanille.getType());
+
 
 
     }

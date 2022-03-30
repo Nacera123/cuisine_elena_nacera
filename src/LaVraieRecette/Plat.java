@@ -9,18 +9,19 @@ public class Plat {
 
     //mes proprietes
     private String nom;
-    private List<String> ingr;
+    //private List<String> ingr;
     private int nPersonne;
     private int tempsDeCuisson;
-    private int niveau;
-    private int evaluation;
+    private String temps;
+    private String  niveau;
+    private double evaluation;
     private String season;
 
-    public Plat(String nom, List<String> ingr, int tempsDeCuisson, int nPersonne, int niveau, int evaluation, String season){
+    public Plat(String nom,  int nPersonne,int tempsDeCuisson, String temps, String  niveau, Double evaluation, String season){
         this.nom=nom;
-        this.ingr = ingr;
-        this.tempsDeCuisson= tempsDeCuisson;
         this.nPersonne =nPersonne;
+        this.tempsDeCuisson= tempsDeCuisson;
+        this.temps=temps;
         this.niveau = niveau;
         this.evaluation = evaluation;
         this.season = season;
@@ -28,27 +29,38 @@ public class Plat {
     }
 
     //geteur des valeurs;
+    //get pour le nom
     public String getNom(){
+
         return this.nom;
     }
 
-    public List<String> getIngr() {
-        return this.ingr;
-    }
-
+    //get pour le nombre de personne
     public int getnPersonne(){
+
         return this.nPersonne;
     }
-
-    public int getNiveau(){
+    //get pour le temps de cuissson
+    public int getTempsDeCuisson(){
+        return this.tempsDeCuisson;
+    }
+    //get pour le temps
+    public String getTemps(){
+        return this.temps;
+    }
+    //get pour le niveau
+    public String getNiveau(){
         return this.niveau;
     }
 
-    public int getEvaluation(){
+    //get  pour evaluation
+    public double getEvaluation(){
+
         return this.evaluation;
     }
-
-    public String getSeason(){
+    //get pour la saison
+    public String getSeason()
+    {
         return this.season;
     }
 
@@ -64,7 +76,7 @@ public class Plat {
         this.nPersonne = nPersonne;
     }
 
-    public void setNiveau(int niveau) {
+    public void setNiveau(String niveau) {
         this.niveau = niveau;
     }
     public void setEvaluation(int evaluation) {
@@ -77,16 +89,25 @@ public class Plat {
 
     //afficher les details de la recette
 
+
+
     @Override
     public String toString() {
         return "Plat{" +
-                "nom='" + nom + '\'' +
-                ", ingr=" + ingr +
-                ", nPersonne=" + nPersonne +
-                ", tempsDeCuisson=" + tempsDeCuisson +
-                ", niveau=" + niveau +
+                "" + nom + '\'' +
+                "nombre de personne" + nPersonne +
+                ", temps De Cuisson=" + tempsDeCuisson +
+                "" + temps + '\'' +
+                ", niveau de difficulté" + niveau + '\'' +
                 ", evaluation=" + evaluation +
                 ", season='" + season + '\'' +
                 '}';
     }
-  }
+
+
+    public static void main(String[] args) {
+        Plat tiramisu = new Plat("tiramisu", 4, 30, "min", "facile", 4.5,"été"  );
+
+        System.out.println(tiramisu);
+    }
+}
