@@ -9,66 +9,114 @@ public class Plat {
 
     //mes proprietes
     private String nom;
-    //private List<String> ingr;
     private int nPersonne;
     private int tempsDeCuisson;
     private String temps;
-    private String  niveau;
+    private String niveau;
     private double evaluation;
     private String season;
+    private String region;
+    private double prix;
+    private String regimeAlimentaire;
+    private String typeDePlat;
+    private Ustensil ustensil;
+    private List<Ingredients> ingredients;
+    private Preparation preparation;
+    private Images im;
 
-    public Plat(String nom,  int nPersonne,int tempsDeCuisson, String temps, String  niveau, Double evaluation, String season){
+
+
+
+    public Plat(String nom, int nPersonne, int tempsDeCuisson, String temps, String niveau, double evaluation, String season,
+                String region, double prix, String regimeAlimentaire, String typeDePlat, Ustensil ustensil, List<Ingredients> ingredients,
+                Preparation preparation, Images im ){
         this.nom=nom;
-        this.nPersonne =nPersonne;
         this.tempsDeCuisson= tempsDeCuisson;
-        this.temps=temps;
+        this.temps = temps;
+        this.nPersonne =nPersonne;
         this.niveau = niveau;
         this.evaluation = evaluation;
         this.season = season;
+        this.region = region;
+        this.prix = prix;
+        this.regimeAlimentaire = regimeAlimentaire;
+        this.typeDePlat = typeDePlat;
+        this.ustensil = ustensil;
+        this.ingredients = ingredients;
+        this.preparation = preparation;
+
 
     }
 
     //geteur des valeurs;
-    //get pour le nom
     public String getNom(){
-
         return this.nom;
     }
 
-    //get pour le nombre de personne
-    public int getnPersonne(){
+    public String getTemps() {
+        return temps;
+    }
 
+    public String getTypeDePlat() {
+        return typeDePlat;
+    }
+
+    public int getnPersonne(){
         return this.nPersonne;
     }
-    //get pour le temps de cuissson
-    public int getTempsDeCuisson(){
-        return this.tempsDeCuisson;
-    }
-    //get pour le temps
-    public String getTemps(){
-        return this.temps;
-    }
-    //get pour le niveau
+
     public String getNiveau(){
         return this.niveau;
     }
 
-    //get  pour evaluation
     public double getEvaluation(){
-
         return this.evaluation;
     }
-    //get pour la saison
-    public String getSeason()
-    {
+
+    public String getSeason(){
         return this.season;
     }
 
-  // Definir les variables
+    public int getTempsDeCuisson() {
+        return tempsDeCuisson;
+    }
 
-  public void setnom(String nom) {
+    public String getRegion() {
+        return region;
+    }
+
+    public double getPrix() {
+        return prix;
+    }
+
+    public String getRegimeAlimentaire() {
+        return regimeAlimentaire;
+    }
+
+    public Ustensil getUstensil() {
+        return ustensil;
+    }
+
+    public List<Ingredients> getIngredients() {
+        return ingredients;
+    }
+
+    public Preparation getPreparation() {
+        return preparation;
+    }
+
+
+// Definir les variables
+
+    public void setNom(String nom) {
         this.nom = nom;
     }
+
+
+    public void setTemps(String temps) {
+        this.temps = temps;
+    }
+
     public void setTempsDeCuisson(int tempsDeCuisson) {
         this.tempsDeCuisson = tempsDeCuisson;
     }
@@ -79,35 +127,60 @@ public class Plat {
     public void setNiveau(String niveau) {
         this.niveau = niveau;
     }
-    public void setEvaluation(int evaluation) {
+    public void setEvaluation(double evaluation) {
         this.evaluation = evaluation;
     }
+
     public void setSeason(String season) {
         this.season = season;
     }
+    public void setRegion(String region) {
+        this.region = region;
+    }
 
+    public void setPrix(double prix) {
+        this.prix = prix;
+    }
+
+    public void setRegimeAlimentaire(String regimeAlimentaire) {
+        this.regimeAlimentaire = regimeAlimentaire;
+    }
+
+    public void setUstensil(Ustensil ustensil) {
+        this.ustensil = ustensil;
+    }
+
+    public void setIngredients(List<Ingredients> ingredients) {
+        this.ingredients = ingredients;
+    }
+
+    public void setPreparation(Preparation preparation) {
+        this.preparation = preparation;
+    }
+
+    public void setTypeDePlat(String typeDePlat) {
+        this.typeDePlat = typeDePlat;
+    }
 
     //afficher les details de la recette
 
 
-
     @Override
     public String toString() {
-        return "Plat{" +
-                "" + nom + '\'' +
-                "nombre de personne" + nPersonne +
-                ", temps De Cuisson=" + tempsDeCuisson +
-                "" + temps + '\'' +
-                ", niveau de difficulté" + niveau + '\'' +
-                ", evaluation=" + evaluation +
-                ", season='" + season + '\'' +
-                '}';
-    }
-
-
-    public static void main(String[] args) {
-        Plat tiramisu = new Plat("tiramisu", 4, 30, "min", "facile", 4.5,"été"  );
-
-        System.out.println(tiramisu);
+        return "Plat : " +
+                nom + ", pour " +
+               nPersonne +  " personnes" +
+                ", Temps de cuisson : " + tempsDeCuisson +
+                temps +
+                ", Niveau : " + niveau +
+                ", Evaluation : " + evaluation +
+                ", Season : " + season  +
+                ", Region : " + region  +
+                ", prix : " + prix +
+                ", Type : " + regimeAlimentaire +
+                ", " + typeDePlat  +  "\n"+ "\n"+
+                "Ustensil : " + "\n"+  ustensil  +
+                "\n"+ "Ingredients : " + ingredients +
+                "\n" + "\n" +preparation;
     }
 }
