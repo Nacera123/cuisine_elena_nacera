@@ -1,6 +1,7 @@
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 
+import javafx.css.converter.FontConverter;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
@@ -115,25 +116,42 @@ public class Interface extends Application {
             ImageView backgroundView = new ImageView(background);
 
             // pour l'image du petit dejeuner
-            Image imagePetitDejeuner = new Image("petitdejeuner.png");
-            ImageView backgroundPetitDejeuner = new ImageView(imagePetitDejeuner);
-            //backgroundPetitDejeuner.layoutXProperty(w);
+            Image imageEntree = new Image("entree.jpg");
+            ImageView backgroundEntree = new ImageView(imageEntree);
+            backgroundEntree.setFitHeight(300);
+            backgroundEntree.setFitWidth(200);
+
+            //pour afficher et dimensionner les images du dejeuner
+            Image imageDejeuner = new Image("dejeuner.png");
+            ImageView backgroundDejeuner = new ImageView(imageDejeuner);
+            backgroundDejeuner.setFitHeight(300);
+            backgroundDejeuner.setFitWidth(200);
+
+            //pour  afficher et dimensionner les desserts
+            Image imageDessert = new Image("dessert.png");
+            ImageView backgroundDessert = new ImageView(imageDessert);
+            backgroundDessert.setFitHeight(300);
+            backgroundDessert.setFitWidth(200);
+
+
+
+
 
             // le font pour les intitules des checkbox
             Font intituleCheckBox= Font.font( "Times New Roman", FontWeight.BOLD, 15);
 
             // le titre pour la partie regime alimentaire
-            Label labelPetitDejeuner= new Label("Petit Dejeuner");
-            labelPetitDejeuner.setFont(intituleCheckBox);
+            Label labelEntree= new Label("Entree");
+            labelEntree.setFont(intituleCheckBox);
 
 
             // le titre pour la partie type de plat(petit dejeuner, diner, dejeuner)
-            Label labelDejeuner= new Label("Dejeuner");
-            labelDejeuner.setFont(intituleCheckBox);
+            Label labelPlat= new Label("Plat");
+            labelPlat.setFont(intituleCheckBox);
 
             // le titre pour la partie Ingredient
-            Label labelDiner = new Label("Diner");
-            labelDiner.setFont(intituleCheckBox);
+            Label labelDessert = new Label("Dessert");
+            labelDessert.setFont(intituleCheckBox);
 
             // les Vbox qui vont contenir les checkbox
             //Vbox1
@@ -153,28 +171,28 @@ public class Interface extends Application {
 
             // Inserer les titre et les chckbox dans chacune des Vbox
             //Insertion pour la Vbox1
-            lesCheck.getChildren().add(backgroundPetitDejeuner);
-            lesCheck.setSpacing(30); //espace entre tous les element
+            lesCheck.getChildren().addAll(labelEntree, backgroundEntree );
+            lesCheck.setSpacing(10); //espace entre tous les element
 
             //Insertion pour la Vbox2
-            lesCheck1.getChildren().addAll(labelDejeuner);
-            lesCheck1.setSpacing(30);
+            lesCheck1.getChildren().addAll(labelPlat, backgroundDejeuner);
+            lesCheck1.setSpacing(10);
 
             //Insertion pour la Vbox3
-            lesCheck2.getChildren().addAll(labelDiner);
-            lesCheck2.setSpacing(30);
+            lesCheck2.getChildren().addAll(labelDessert, backgroundDessert);
+            lesCheck2.setSpacing(10);
 
 
 
             // la hbox qui contient toutes les Vbox et son style
             HBox divConteneur=new HBox();
             divConteneur.getChildren().addAll(lesCheck, lesCheck1, lesCheck2);
-            divConteneur.setSpacing(100);
+            divConteneur.setSpacing(5);
             divConteneur.setTranslateY(100);
 
-            divConteneur.setLayoutX(200);
+            divConteneur.setLayoutX(300);
             divConteneur.setLayoutY(200);
-            divConteneur.setPrefSize(800,300);
+            divConteneur.setPrefSize(500,300);
             divConteneur.setStyle("-fx-background-color:#DCDCDC;");
 
             // Mon root
