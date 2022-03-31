@@ -16,21 +16,31 @@ public class Preparation {
         this.temps = temps;
     }
 
-
-    // get pour l'etape
-    public String [] getEtape(){
+    public String[] getEtape() {
         return etape;
     }
 
-    // get pour le temps de preparation
-    public int getTempsDePreparation(){
+    public int getTempsDePreparation() {
         return tempsDePreparation;
     }
 
-    public java.lang.String getTemps() {
+    public String getTemps() {
         return temps;
     }
 
+    public void setEtape(String[] etape) {
+        this.etape = etape;
+    }
+
+    public void setTempsDePreparation(int tempsDePreparation) {
+        this.tempsDePreparation = tempsDePreparation;
+    }
+
+    public void setTemps(String temps) {
+        this.temps = temps;
+    }
+
+    // put together all steps
     private String MyMethod(String [] arr) {
         String output = "";
         for (String x : arr) {
@@ -41,11 +51,9 @@ public class Preparation {
 
     @Override
     public String toString() {
-        return "Preparation{" +
-                "etape=" + MyMethod(etape) +
-                ", tempsDePreparation=" + tempsDePreparation +
-                "temps='" + temps + '\'' +
-                '}';
+        return "Etapes : " + "\n" + MyMethod(etape) + "\n" +
+                "Temps de preparation : " + tempsDePreparation +
+                temps;
     }
 
     public static void main(String[] args) {
