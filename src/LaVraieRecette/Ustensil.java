@@ -5,15 +5,13 @@ import java.util.Arrays;
 public class Ustensil {
     private String [] ustensil;
 
+    //constructor
+    public Ustensil (String [] ustensil){this.ustensil = ustensil;}
 
-    public Ustensil (String [] ustensil){
-        this.ustensil = ustensil;
-    }
+    // getter for ustensil
+    public String[] getUstensil() {return ustensil;}
 
-    public String[] getUstensil() {
-        return ustensil;
-    }
-
+    //setter for ustensil
     public void setUstensil(String[] ustensil) {
         this.ustensil = ustensil;
     }

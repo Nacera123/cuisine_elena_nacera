@@ -1,7 +1,5 @@
 package LaVraieRecette;
 
-import java.sql.Time;
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -20,15 +18,15 @@ public class Plat {
     private String regimeAlimentaire;
     private String typeDePlat;
     private Ustensil ustensil;
-    private List<Ingredients> ingredients;
+    private Ingredients ingredients;
     private Preparation preparation;
     private Images im;
 
 
 
-
+    // Constroctur
     public Plat(String nom, int nPersonne, int tempsDeCuisson, String temps, String niveau, double evaluation, String season,
-                String region, double prix, String regimeAlimentaire, String typeDePlat, Ustensil ustensil, List<Ingredients> ingredients,
+                String region, double prix, String regimeAlimentaire, String typeDePlat, Ustensil ustensil, Ingredients ingredients,
                 Preparation preparation, Images im ){
         this.nom=nom;
         this.tempsDeCuisson= tempsDeCuisson;
@@ -48,123 +46,96 @@ public class Plat {
 
     }
 
-    //geteur des valeurs;
+    //getters
     public String getNom(){
         return this.nom;
     }
-
     public String getTemps() {
         return temps;
     }
-
     public String getTypeDePlat() {
         return typeDePlat;
     }
-
     public int getnPersonne(){
         return this.nPersonne;
     }
-
     public String getNiveau(){
         return this.niveau;
     }
-
     public double getEvaluation(){
         return this.evaluation;
     }
-
     public String getSeason(){
         return this.season;
     }
-
     public int getTempsDeCuisson() {
         return tempsDeCuisson;
     }
-
     public String getRegion() {
         return region;
     }
-
     public double getPrix() {
         return prix;
     }
-
     public String getRegimeAlimentaire() {
         return regimeAlimentaire;
     }
-
     public Ustensil getUstensil() {
         return ustensil;
     }
-
-    public List<Ingredients> getIngredients() {
+    public Ingredients getIngredients() {
         return ingredients;
     }
-
     public Preparation getPreparation() {
         return preparation;
     }
 
 
-// Definir les variables
-
+    // Setters
     public void setNom(String nom) {
         this.nom = nom;
     }
-
-
     public void setTemps(String temps) {
         this.temps = temps;
     }
-
     public void setTempsDeCuisson(int tempsDeCuisson) {
         this.tempsDeCuisson = tempsDeCuisson;
     }
     public void setnPersonne(int nPersonne) {
         this.nPersonne = nPersonne;
     }
-
     public void setNiveau(String niveau) {
         this.niveau = niveau;
     }
     public void setEvaluation(double evaluation) {
         this.evaluation = evaluation;
     }
-
     public void setSeason(String season) {
         this.season = season;
     }
     public void setRegion(String region) {
         this.region = region;
     }
-
     public void setPrix(double prix) {
         this.prix = prix;
     }
-
     public void setRegimeAlimentaire(String regimeAlimentaire) {
         this.regimeAlimentaire = regimeAlimentaire;
     }
-
     public void setUstensil(Ustensil ustensil) {
         this.ustensil = ustensil;
     }
-
-    public void setIngredients(List<Ingredients> ingredients) {
+    public void setIngredients(Ingredients ingredients) {
         this.ingredients = ingredients;
     }
-
     public void setPreparation(Preparation preparation) {
         this.preparation = preparation;
     }
-
     public void setTypeDePlat(String typeDePlat) {
         this.typeDePlat = typeDePlat;
     }
 
     //afficher les details de la recette
-
-
     @Override
     public String toString() {
         return "Plat : " +
