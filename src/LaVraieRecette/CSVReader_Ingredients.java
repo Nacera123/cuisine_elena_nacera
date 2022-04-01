@@ -11,7 +11,7 @@ import java.util.Map;
 public class CSVReader_Ingredients {
 
     public static Map<String, String[]> reader() {
-        String path2 = "C:\\Users\\elena\\Documents\\POEI\\cuisine_elena_nacera\\cuisine_elena_nacera\\src\\csvFiles\\Ingredients.csv";
+        String path2 = "src/csvFiles/Ingredients.csv";
         String line = "";
         Map<String, String[]> ingredients = new HashMap<>();
 

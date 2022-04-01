@@ -1,7 +1,8 @@
+package LaVraieRecette;
+
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Group;
-import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -10,10 +11,7 @@ import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
-
-import java.awt.*;
 
 public class ResultatRecherche extends Application{
     public static void main(String[] args) {
@@ -32,17 +30,17 @@ public class ResultatRecherche extends Application{
         textResultatRecherche.setTextFill(Color.rgb(240,255,240));
 
         //les images
-        Image image1 = new Image("entree.jpg");
+        Image image1 = new Image("images/entree.jpg");
         ImageView imageEntree = new ImageView(image1);
         imageEntree.setFitHeight(150);
         imageEntree.setFitWidth(450);
 
-        Image image2 = new Image("dejeuner.png");
+        Image image2 = new Image("images/dejeuner.png");
         ImageView imageDejeuner = new ImageView(image2);
         imageDejeuner.setFitWidth(450);
         imageDejeuner.setFitHeight(150);
 
-        Image image3 = new Image("dessert.png");
+        Image image3 = new Image("images/dessert.png");
         ImageView imageDessert= new ImageView(image3);
         imageDessert.setFitHeight(150);
         imageDessert.setFitWidth(450);
@@ -89,7 +87,7 @@ public class ResultatRecherche extends Application{
 
 
         // le titre du site
-       Label titre= new Label("La Vraie Recette");
+       Label titre= new Label("La Vraie LaVraieRecette.Recette");
 
         //le font du titre du site
         Font fontTitre = Font.font("Times New Roman", FontWeight.BOLD, 40);
@@ -100,7 +98,7 @@ public class ResultatRecherche extends Application{
         titre.setTranslateY(20);
 
         //image d'arriere plan
-        Image image=new Image("photo.png");
+        Image image=new Image("images/photo.png");
         ImageView backgroundImage= new ImageView(image);
 
         //le border pane

@@ -1,3 +1,5 @@
+package LaVraieRecette;
+
 import javafx.application.Application;
 
 import javafx.scene.Group;
@@ -28,7 +30,7 @@ public class Visuel extends Application{
     public void start(Stage window) throws Exception {
 
         // le titre du site
-        Label titre= new Label("La Vraie Recette");
+        Label titre= new Label("La Vraie LaVraieRecette.Recette");
         //le font du titre du site
 
         Font fontTitre = Font.font("Times New Roman", FontWeight.BOLD, 40);
@@ -52,7 +54,7 @@ public class Visuel extends Application{
 
 
         //pour l'image en arriere plan
-        Image background = new Image( "photo.png");
+        Image background = new Image("images/photo.png");
         ImageView backgroundView = new ImageView(background);
 
         //les checkbox pour les ingredients

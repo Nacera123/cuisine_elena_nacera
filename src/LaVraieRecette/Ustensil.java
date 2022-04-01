@@ -1,6 +1,5 @@
 package LaVraieRecette;
 
-import java.util.Arrays;
 
 public class Ustensil {
     private String [] ustensil;

@@ -1,25 +1,19 @@
-import javafx.animation.AnimationTimer;
+package LaVraieRecette;
+
 import javafx.application.Application;
 
-import javafx.css.converter.FontConverter;
-import javafx.geometry.Insets;
 import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.scene.*;
-import javafx.scene.canvas.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.*;
 import javafx.scene.image.*;
-
-import java.awt.*;
 
 
 public class Interface extends Application {
@@ -44,7 +38,7 @@ public class Interface extends Application {
 
 
             // le titre du site
-            Label titre= new Label("La Vraie Recette");
+            Label titre= new Label("La Vraie LaVraieRecette.Recette");
 
             //le font du titre du site
             Font fontTitre = Font.font("Times New Roman", FontWeight.BOLD, 40);
@@ -112,23 +106,23 @@ public class Interface extends Application {
 
 
             //pour l'image en arriere plan
-            Image background = new Image( "photo.png");
+            Image background = new Image("images/photo.png");
             ImageView backgroundView = new ImageView(background);
 
             // pour l'image du petit dejeuner
-            Image imageEntree = new Image("entree.jpg");
+            Image imageEntree = new Image("images/entree.jpg");
             ImageView backgroundEntree = new ImageView(imageEntree);
             backgroundEntree.setFitHeight(300);
             backgroundEntree.setFitWidth(200);
 
             //pour afficher et dimensionner les images du dejeuner
-            Image imageDejeuner = new Image("dejeuner.png");
+            Image imageDejeuner = new Image("images/dejeuner.png");
             ImageView backgroundDejeuner = new ImageView(imageDejeuner);
             backgroundDejeuner.setFitHeight(300);
             backgroundDejeuner.setFitWidth(200);
 
             //pour  afficher et dimensionner les desserts
-            Image imageDessert = new Image("dessert.png");
+            Image imageDessert = new Image("images/dessert.png");
             ImageView backgroundDessert = new ImageView(imageDessert);
             backgroundDessert.setFitHeight(300);
             backgroundDessert.setFitWidth(200);

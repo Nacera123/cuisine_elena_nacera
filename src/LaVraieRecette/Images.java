@@ -18,7 +18,7 @@ public class Images extends JFrame {
         setSize(800,400);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-        jl.setIcon(new ImageIcon("C:\\Users\\elena\\Documents\\POEI\\cuisine_elena_nacera\\cuisine_elena_nacera\\src\\images\\tiramisu2.png"));
+        jl.setIcon(new ImageIcon("images\\tiramisu2.png"));
         jp.add(jl);
 
         add(jp);// add janel to frame

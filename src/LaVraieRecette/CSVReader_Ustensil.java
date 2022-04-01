@@ -10,7 +10,7 @@ import java.util.Map;
 
 public class CSVReader_Ustensil {
     public static Map<String, String[]> reader() {
-        String path1 = "C:\\Users\\elena\\Documents\\POEI\\cuisine_elena_nacera\\cuisine_elena_nacera\\src\\csvFiles\\Ustensil.csv";
+        String path1 = "src/csvFiles/Ustensil.csv";
         String line = "";
         Map<String, String[]> ustensil = new HashMap<>();
 

@@ -1,4 +1,4 @@
-package LaVraieRecette;
+package LaVraieRecette.Plats;
 
 import java.util.Arrays;
 

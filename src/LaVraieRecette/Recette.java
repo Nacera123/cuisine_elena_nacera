@@ -1,3 +1,5 @@
+package LaVraieRecette;
+
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Group;
@@ -24,7 +26,7 @@ public class Recette extends Application {
 
 
         //les images
-        Image image1 = new Image("tiramisu.jpg");
+        Image image1 = new Image("images/tiramisu.png");
         ImageView imageEntree = new ImageView(image1);
         imageEntree.setFitHeight(150);
         imageEntree.setFitWidth(450);
@@ -75,7 +77,7 @@ public class Recette extends Application {
 
 
         // le titre du site
-        Label titre= new Label("La Vraie Recette");
+        Label titre= new Label("La Vraie LaVraieRecette.Recette");
 
         //le font du titre du site
         Font fontTitre = Font.font("Times New Roman", FontWeight.BOLD, 40);
@@ -86,7 +88,7 @@ public class Recette extends Application {
         titre.setTranslateY(20);
 
         //image d'arriere plan
-        Image image=new Image("photo.png");
+        Image image=new Image("images/photo.png");
         ImageView backgroundImage= new ImageView(image);
 
         //le border pane
