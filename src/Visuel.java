@@ -144,7 +144,7 @@ public class Visuel extends Application{
         window.setScene(checkScene);
         window.setWidth(1100);
         window.setHeight(650);
-        window.setTitle("checkbox");
+        window.setTitle("lavraierecette.com/affinermarecherche");
         window.show();
     }
 }

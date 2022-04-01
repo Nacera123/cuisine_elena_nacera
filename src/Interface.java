@@ -211,7 +211,7 @@ public class Interface extends Application {
             stage.setScene(checkScene);
             stage.setWidth(1100);
             stage.setHeight(650);
-            stage.setTitle("checkbox");
+            stage.setTitle("lavraierecette.com");
             stage.show();
 
 
