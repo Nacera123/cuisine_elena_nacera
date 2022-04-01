@@ -1,39 +1,35 @@
 package LaVraieRecette;
 
-
-import java.util.ArrayList;
-
 public class Ingredients {
+    private String[] ingredients;
 
-    String nom;
-    double quantite;
-    String type;
-
-    //constructeur
-    public Ingredients(String nom, double quantite, String type) {
-        this.nom = nom;
-        this.quantite = quantite;
-        this.type = type;
+    //contsructor
+    public Ingredients(String[] ingredients) {
+        this.ingredients = ingredients;
     }
 
-
-    // get pour le nom
-    public String getNom() {
-        return nom;
+    // getter
+    public String[] getIngredients() {
+        return ingredients;
     }
 
-    //get pour la quantité
-    public double getQuantite() {
-        return quantite;
+    //setter
+    public void setIngredients(String[] ingredients) {
+        this.ingredients = ingredients;
     }
 
-    //get pour le type
-    public String getType() {
-        return type;
+    // put together all ustensil
+    private String MyMethod3(String[] arr) {
+        String output = "";
+        for (String x : arr) {
+            output = output + x + "\n";
+        }
+        return output;
     }
 
     @Override
     public String toString() {
-        return "\n" + nom + "la quantité " + quantite + " " + type;
+        return MyMethod3(ingredients);
     }
 }
+

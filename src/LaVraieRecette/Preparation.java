@@ -16,9 +16,7 @@ public class Preparation {
         this.temps = temps;
     }
 
-    public String[] getEtape() {
-        return etape;
-    }
+    public String[] getEtape() {return etape;}
 
     public int getTempsDePreparation() {
         return tempsDePreparation;
@@ -54,14 +52,5 @@ public class Preparation {
         return "Etapes : " + "\n" + MyMethod(etape) + "\n" +
                 "Temps de preparation : " + tempsDePreparation +
                 temps;
-    }
-
-    public static void main(String[] args) {
-       // String [] etape = new String[2];
-       // String [] etape = {"Faire un ruban avec les jaunes d'oeufs, le sucre et le sucre vanillé.","Y ajouter le mascarpone."};
-       // Preparation tiramisu = new Preparation(etape,25 , "min");
-       // System.out.println(tiramisu);
-
-
     }
 }
