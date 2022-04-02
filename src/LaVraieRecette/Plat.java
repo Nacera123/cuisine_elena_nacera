@@ -1,7 +1,5 @@
 package LaVraieRecette;
 
-import LaVraieRecette.Plats.Preparation;
-
 
 public class Plat {
 

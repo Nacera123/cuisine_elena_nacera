@@ -1,7 +1,6 @@
 package LaVraieRecette;
 
 import javafx.application.Application;
-
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -18,7 +17,9 @@ import javafx.scene.text.FontWeight;
 
 import javafx.stage.Stage;
 
+import javax.swing.*;
 
+import static javafx.scene.control.CheckBox.*;
 
 
 public class Visuel extends Application{
@@ -30,7 +31,7 @@ public class Visuel extends Application{
     public void start(Stage window) throws Exception {
 
         // le titre du site
-        Label titre= new Label("La Vraie LaVraieRecette.Recette");
+        Label titre= new Label("La Vraie Recette");
         //le font du titre du site
 
         Font fontTitre = Font.font("Times New Roman", FontWeight.BOLD, 40);
@@ -51,16 +52,15 @@ public class Visuel extends Application{
             rechercher.setText("Clicked!");
         });
 
-
-
         //pour l'image en arriere plan
-        Image background = new Image("images/photo.png");
+        Image background = new Image( "images/photo.png");
         ImageView backgroundView = new ImageView(background);
 
         //les checkbox pour les ingredients
         CheckBox carotte = new CheckBox( "carotte" );
         CheckBox patate = new CheckBox( "pomme de terre" );
         CheckBox tomate = new CheckBox( "tomate" );
+
 
         //les checkbox pour les type de plat
         CheckBox petitDej = new CheckBox( "Petit Dejeuner" );
@@ -91,6 +91,7 @@ public class Visuel extends Application{
         // les Vbox qui vont contenir les checkbox
         //Vbox1
         VBox lesCheck =new VBox();
+        //lesCheck.setStyle("-fx-background-color:transparent");
 
         lesCheck.setPrefSize(200,50);
         //Vbox2
@@ -128,7 +129,7 @@ public class Visuel extends Application{
         divConteneur.setLayoutX(100);
         divConteneur.setLayoutY(100);
         divConteneur.setPrefSize(800,200);
-        divConteneur.setStyle("-fx-background-color:#DCDCDC;");
+        divConteneur.setStyle("-fx-background-color:rgba(255, 255, 128, .5); -fx-background-radius: 10;");
 
         // Mon root
         Group root1 =new Group();

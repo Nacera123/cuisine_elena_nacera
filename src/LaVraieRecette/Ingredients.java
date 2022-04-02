@@ -1,6 +1,10 @@
 package LaVraieRecette;
 
-public class Ingredients {
+import javafx.scene.Node;
+
+import java.net.DatagramSocket;
+
+public class Ingredients extends Node {
     private String[] ingredients;
 
     //contsructor
@@ -30,6 +34,15 @@ public class Ingredients {
     @Override
     public String toString() {
         return MyMethod3(ingredients);
+    }
+
+    @Override
+    public Node getStyleableNode() {
+        return super.getStyleableNode();
+    }
+
+    public DatagramSocket wrappingWidthProperty() {
+        return null;
     }
 }
 

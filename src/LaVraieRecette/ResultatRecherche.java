@@ -3,6 +3,7 @@ package LaVraieRecette;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Group;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -11,6 +12,7 @@ import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class ResultatRecherche extends Application{
@@ -79,7 +81,7 @@ public class ResultatRecherche extends Application{
         //le contenu de toutes les recettes
         VBox vBoxConteneur =new VBox();
         vBoxConteneur.setPrefSize(470,500);
-        vBoxConteneur.setStyle("-fx-background-color:#F0F8FF");
+        vBoxConteneur.setStyle("-fx-background-color:transparent");
         vBoxConteneur.setTranslateY(125);
         vBoxConteneur.setTranslateX(5);
         vBoxConteneur.getChildren().addAll(vBoximage1,vBoximage2,vBoximage3);
@@ -87,7 +89,7 @@ public class ResultatRecherche extends Application{
 
 
         // le titre du site
-       Label titre= new Label("La Vraie LaVraieRecette.Recette");
+       Label titre= new Label("La Vraie Recette");
 
         //le font du titre du site
         Font fontTitre = Font.font("Times New Roman", FontWeight.BOLD, 40);

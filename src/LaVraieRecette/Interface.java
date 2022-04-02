@@ -1,7 +1,6 @@
 package LaVraieRecette;
 
 import javafx.application.Application;
-
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -38,23 +37,23 @@ public class Interface extends Application {
 
 
             // le titre du site
-            Label titre= new Label("La Vraie LaVraieRecette.Recette");
+            Label titre= new Label("La Vraie Recette");
 
             //le font du titre du site
-            Font fontTitre = Font.font("Times New Roman", FontWeight.BOLD, 40);
+            Font fontTitre = Font.font("Playfair Display", FontWeight.BOLD, 40);
             titre.setFont(fontTitre);
-
-            titre.setTextFill(Color.rgb(176,224,230));
-            titre.setTranslateX(400);
+            titre.setTextFill(Color.rgb(255,255,255));
+            titre.setTranslateX(10);
             titre.setTranslateY(20);
 
             // text menu du jour
             Label labelMenuDuJour = new Label("Menu Du Jour");
-            labelMenuDuJour.setTranslateY(250);
+            labelMenuDuJour.setTranslateY(200);
             labelMenuDuJour.setTranslateX(500);
+            labelMenuDuJour.setTextFill(Color.rgb(255,255,255));
 
             //font size pour le menu du jour
-            Font fontMenu = Font.font("Times New Roman", FontWeight.BOLD, 30);
+            Font fontMenu = Font.font("TPlayfair Display", FontWeight.BOLD, 30);
             labelMenuDuJour.setFont(fontMenu);
 
 
@@ -64,11 +63,12 @@ public class Interface extends Application {
             textFieldnNomPlat.setTranslateX(50);
             textFieldnNomPlat.setTranslateY(30);
 
+
             // Bouton et son style
             Button rechercher= new Button("Recherche");
             rechercher.setTranslateY(30);
-            rechercher.setTranslateX(20);
-            rechercher.setStyle("-fx-background-color: #87CEEB; ");
+            rechercher.setTranslateX(10);
+            rechercher.setStyle("-fx-background-color: #FFFFFF; ");
 
             // rendre mon bouton opperationnel
             rechercher.setOnAction(value ->  {
@@ -76,10 +76,10 @@ public class Interface extends Application {
             });
 
             //Bouton affiner ma recherche
-            Button buttonAffinnerRecherche = new Button("Affiner ma recherche");
+            Button buttonAffinnerRecherche = new Button("");
             buttonAffinnerRecherche.setTranslateY(50);
-            buttonAffinnerRecherche.setTranslateX(100);
-            buttonAffinnerRecherche.setStyle("-fx-background-color: #87CEEB;");
+            buttonAffinnerRecherche.setTranslateX(50);
+            buttonAffinnerRecherche.setStyle("-fx-background-color:rgba(255, 255, 255, .0); -fx-background-radius: 10;");
 
             //la hbox qui va contenir la barre de recherche + affiner ma recherche
             VBox vboxTextField = new VBox();
@@ -101,10 +101,6 @@ public class Interface extends Application {
 
             hboxrecherche.getChildren().addAll(vboxTextField,hboxBouton);
 
-
-
-
-
             //pour l'image en arriere plan
             Image background = new Image("images/photo.png");
             ImageView backgroundView = new ImageView(background);
@@ -113,26 +109,22 @@ public class Interface extends Application {
             Image imageEntree = new Image("images/entree.jpg");
             ImageView backgroundEntree = new ImageView(imageEntree);
             backgroundEntree.setFitHeight(300);
-            backgroundEntree.setFitWidth(200);
+            backgroundEntree.setFitWidth(250);
 
             //pour afficher et dimensionner les images du dejeuner
             Image imageDejeuner = new Image("images/dejeuner.png");
             ImageView backgroundDejeuner = new ImageView(imageDejeuner);
             backgroundDejeuner.setFitHeight(300);
-            backgroundDejeuner.setFitWidth(200);
+            backgroundDejeuner.setFitWidth(250);
 
             //pour  afficher et dimensionner les desserts
             Image imageDessert = new Image("images/dessert.png");
             ImageView backgroundDessert = new ImageView(imageDessert);
             backgroundDessert.setFitHeight(300);
-            backgroundDessert.setFitWidth(200);
-
-
-
-
+            backgroundDessert.setFitWidth(250);
 
             // le font pour les intitules des checkbox
-            Font intituleCheckBox= Font.font( "Times New Roman", FontWeight.BOLD, 15);
+            Font intituleCheckBox= Font.font( "Playfair Display", FontWeight.BOLD, 15);
 
             // le titre pour la partie regime alimentaire
             Label labelEntree= new Label("Entree");
@@ -161,8 +153,6 @@ public class Interface extends Application {
 
             lesCheck2.setPrefSize(200,50);
 
-
-
             // Inserer les titre et les chckbox dans chacune des Vbox
             //Insertion pour la Vbox1
             lesCheck.getChildren().addAll(labelEntree, backgroundEntree );
@@ -176,18 +166,16 @@ public class Interface extends Application {
             lesCheck2.getChildren().addAll(labelDessert, backgroundDessert);
             lesCheck2.setSpacing(10);
 
-
-
             // la hbox qui contient toutes les Vbox et son style
             HBox divConteneur=new HBox();
             divConteneur.getChildren().addAll(lesCheck, lesCheck1, lesCheck2);
             divConteneur.setSpacing(5);
             divConteneur.setTranslateY(100);
 
-            divConteneur.setLayoutX(300);
-            divConteneur.setLayoutY(200);
+            divConteneur.setLayoutX(200); // position of box
+            divConteneur.setLayoutY(170);
             divConteneur.setPrefSize(500,300);
-            divConteneur.setStyle("-fx-background-color:#DCDCDC;");
+            divConteneur.setStyle("-fx-background-color:rgba(255, 255, 255, .0); -fx-background-radius: 5;");
 
             // Mon root
             Group root1 =new Group();
